@@ -1,0 +1,16 @@
+@import "../../../styles/base.scss";
+
+.OBHeader {
+  padding: 10px;
+  h1 {
+    font-size: 2rem;
+  }
+  &::after {
+    display: flex;
+    content: " ";
+    width: 8vh;
+    border: 1px solid $blue;
+    position: relative;
+    top: -2vh;
+  }
+}

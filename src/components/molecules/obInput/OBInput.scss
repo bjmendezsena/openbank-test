@@ -1,0 +1,45 @@
+@import "../../../styles/base.scss";
+
+.OBInput {
+  padding: 0 15px;
+  align-items: center;
+  &-label {
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: $secondary-color;
+  }
+  &-container {
+    position: relative;
+    margin-top: 7px;
+    display: flex;
+    &-input {
+      width: 100%;
+      border: none;
+      border: 1px solid $opacity;
+      border-radius: 5px;
+      height: 45px;
+      transition: border 0.1s ease-in-out;
+      padding: 0 20px;
+      font-size: 1rem;
+      letter-spacing: 2px;
+      color: $secondary-color;
+
+      &::placeholder {
+        font-size: 1rem;
+        letter-spacing: 2px;
+        color: $opacity;
+      }
+      &:focus {
+        border-bottom: solid $orange;
+        transition: border 0.1s ease-in-out;
+        outline: none;
+      }
+    }
+    &-icon {
+      position: relative;
+      left: -8vh;
+      align-self: center;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+@import "../../../styles/base.scss";
+
+.OBButton {
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  height: 35px;
+  width: 90px;
+  outline: none;
+  font-size: 12px;
+  padding: 12px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+
+  &-primary {
+    background-color: $primary-color;
+    -webkit-appearance: none;
+  }
+  &-secondary {
+    background-color: $secondary-color;
+    -webkit-appearance: none;
+  }
+  &-light {
+    background-color: $white;
+    -webkit-appearance: none;
+    color: $secondary-color;
+  }
+}

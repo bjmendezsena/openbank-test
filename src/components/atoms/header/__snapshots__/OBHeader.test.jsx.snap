@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in Title component Should display the component with the correct styles 1`] = `
+<DocumentFragment>
+  <div
+    class="OBHeader"
+    test-id="test-id-header"
+  >
+    <h1>
+      Title
+    </h1>
+  </div>
+</DocumentFragment>
+`;
