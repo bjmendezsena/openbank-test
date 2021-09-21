@@ -1,5 +1,9 @@
 In the project directory, you can run:
 
+Si te da error al tratar de correr la aplicación crea un archivo .env y dentro pon el siguiente atributo:
+
+SKIP_PREFLIGHT_CHECK=true
+
 ### `npm start`
 
 Runs the app in the development mode.<br>
