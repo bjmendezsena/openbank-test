@@ -1,0 +1,50 @@
+@import "../../../styles/base.scss";
+
+.wizart {
+  background-color: rgba(1, 43, 69, 0.3);
+  padding: 0 0;
+  &-header {
+    min-height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20vh;
+    height: auto;
+    box-shadow: $shadow;
+    position: relative;
+    background: $white;
+    &-footer {
+      display: flex;
+      flex-direction: column;
+      &::before{
+        content: '';
+        height: 1px;
+        background-color: $opacity;
+        width: 100%;
+        margin: 10px 0;
+        position: relative;
+      }
+      &-buttons{
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+    @media screen and(max-width: $medium) {
+      padding: 15px;
+      &-title {
+        padding-bottom: 5vh;
+      }
+      &-footer {
+        padding: 0;
+      }
+    }
+  }
+}

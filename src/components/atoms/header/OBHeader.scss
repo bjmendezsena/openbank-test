@@ -1,7 +1,6 @@
 @import "../../../styles/base.scss";
 
 .OBHeader {
-  padding: 10px;
   h1 {
     font-size: 2rem;
   }
@@ -9,8 +8,14 @@
     display: flex;
     content: " ";
     width: 8vh;
-    border: 1px solid $blue;
+    border: 2px solid $blue;
+    border-radius: 5px;
     position: relative;
-    top: -2vh;
+    margin-top: 10px;
+  }
+  @media screen and(max-width: $medium) {
+    h1 {
+      font-size: 25px;
+    }
   }
 }

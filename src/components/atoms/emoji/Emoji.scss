@@ -1,0 +1,18 @@
+@import "../../../styles/base.scss";
+
+.emoji {
+
+  &-svg_emoji {
+    &-CHECK {
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+    }
+    &-SUCCESS {
+      max-width: 15vw;
+    }
+    &-WARNING {
+      width: 15vw;
+    }
+  }
+}

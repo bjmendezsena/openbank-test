@@ -1,9 +1,6 @@
 import React from "react";
 import { OBInput } from "./OBInput";
 import { render, fireEvent } from "@testing-library/react";
-import ReactDom from "react-dom";
-import { shallow } from "enzyme";
-
 
 const getWrapper = (props = {}) => {
   return render(<OBInput {...props} />);
@@ -29,33 +26,27 @@ describe("Test in OPinput component", () => {
     expect(input.value).toBe(newValue);
   });
 
-  it("Should display the visible icon", () => {
-    const container = document.createElement("div");
-    document.body.appendChild(container);
+  it("Should display the invisible icon", () => {
+    const type = 'password';
+    const testid = "test-icon-invisible";
+    const wrapper = getWrapper({ onChange, placeHolder, type });
 
-    const withIcon = true;
+    const { queryByTestId } = wrapper;
 
-    const props = { onChange, placeHolder,  withIcon };
-
-    const wrapper = shallow(<OBInput {...props} />);
-    const icon = wrapper.find('.OBInput-container-icon').getElement();
-    expect(icon).toMatchSnapshot();
+    expect(queryByTestId(testid)).toBeInTheDocument();
   });
 
-  it("Should display the invisible icon", () => {
-    const container = document.createElement("div");
-    const onTouchVisible = jest.fn();
-    document.body.appendChild(container);
-    const visible = false;
-    const withIcon = true;
+  it("Should display the visible icon", () => {
+    const type = 'password';
+    const testid = "test-icon-visible";
+    const testidContainer = "test-icon-container-visible";
+    const wrapper = getWrapper({ onChange, placeHolder, type });
 
-    const props = { onChange, placeHolder, visible, withIcon , onTouchVisible};
+    const { queryByTestId } = wrapper;
+    const container = queryByTestId(testidContainer);
+    fireEvent.click(container);
+    const icon = queryByTestId(testid);
 
-    ReactDom.render(<OBInput {...props} />, container);
-    const icons = container.querySelectorAll("#invisible-icon");
-
-    expect(icons.length).toBe(1);
-    document.body.removeChild(container);
-    container.remove();
+    expect(icon).toBeInTheDocument();
   });
 });

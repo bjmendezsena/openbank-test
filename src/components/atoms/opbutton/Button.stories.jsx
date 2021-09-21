@@ -1,21 +1,13 @@
 import React from "react";
 import { OPButton } from "./OPButton";
+import { storiesOf } from "@storybook/react";
 
-export default {
-  title: "Atoms/Button",
-  component: OPButton,
-};
-
-export const Primary = (args) => <OPButton variant="primary">Button</OPButton>;
-
-export const Secondary = (args) => (
-  <OPButton variant="secondary">Button</OPButton>
-);
-
-export const Terciary = (args) => <OPButton variant="light">Button</OPButton>;
-
-export const ButtonIcon = (args) => (
-  <OPButton variant="secondary" withIcon>
-    Siguiente
-  </OPButton>
-);
+storiesOf("Button", module)
+  .add("Primary", () => <OPButton variant="primary">Primary</OPButton>)
+  .add("Secondary", () => <OPButton variant="secondary">Secondary</OPButton>)
+  .add("Light", () => <OPButton variant="light">Ligth</OPButton>)
+  .add("ButtonIcon", () => (
+    <OPButton variant="secondary" withIcon>
+      Siguiente
+    </OPButton>
+  ));

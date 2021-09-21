@@ -1,0 +1,29 @@
+@import "../../../styles/base.scss";
+.card_info_container {
+  display: grid;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  &-emoji_container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    .emoji-svg_emoji {
+      &-HEAD,
+      &-BOX {
+        height: 100%;
+      }
+    }
+  }
+
+  &-text_body_container {
+    padding: 0 10px;
+    text-align: center;
+    &-text {
+      font-size: 20px;
+      font-weight: 100;
+      color: $secondary-color;
+    }
+  }
+}

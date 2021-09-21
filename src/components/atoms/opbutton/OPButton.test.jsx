@@ -33,7 +33,7 @@ describe("Test in OPButton component", () => {
     expect(getByText(children)).toHaveClass(`OBButton-${variant}`);
   });
 
-  it("Should be secondary the primary button", () => {
+  it("Should be the secondary button", () => {
     const variant = "secondary";
     const wrapper = getWrapper({ children, onClick, variant });
     const { getByText } = wrapper;
@@ -41,7 +41,7 @@ describe("Test in OPButton component", () => {
     expect(getByText(children)).toHaveClass(`OBButton-${variant}`);
   });
 
-  it("Should be secondary the terciary button", () => {
+  it("Should be the secondary button", () => {
     const variant = "light";
     const wrapper = getWrapper({ children, onClick, variant });
     const { getByText } = wrapper;

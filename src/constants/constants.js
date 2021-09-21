@@ -1,6 +1,7 @@
-export const EMOGI_NAME = {
+export const EMOJI_NAME = {
   BOX: "BOX",
-  DONE: "DONE",
+  SUCCESS: "SUCCESS",
   HEAD: "HEAD",
   WARNING: "WARNING",
+  CHECK: "CHECK",
 };

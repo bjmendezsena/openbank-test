@@ -1,5 +1,25 @@
 {
-    "header":{
-        "msg":"Hello world"
-    }
+  "wizard": {
+    "header": "Create your password manager",
+    "btn_cancel": "Cancel",
+    "btn_continue": "Continue"
+  },
+  "step_1": {
+    "card_1": "Save here all your passwords, data or any information, forget paper notes and unprotected applications",
+    "card_2": "Create your master key: only you can access your secrets with it.",
+    "subtitle_1": "How it works",
+    "subtitle_2": "What data can you save",
+    "desc_1": "First, you must create a different password for your electronic belongings. You will not be able to recover your password, so remember it well.",
+    "desc_2": "For example, the number of your card, the PIN and PUK of your mobile phone, the serial number of one of your devices or any information you need to have in a safe place."
+  },
+  "step_2": {
+    "desc_1": "First, you must create a different password for your electronic belongings.",
+    "desc_2": "You will not be able to recover your password, so remember it well.",
+    "form": {
+      "input_1": "Create your master password",
+      "input_2": "Repeat your master password"
+    },
+    "text_2": "You can also create a hint to help you remember your master password.",
+    "input_secret": "Create your post to remember your password (optional)"
+  }
 }

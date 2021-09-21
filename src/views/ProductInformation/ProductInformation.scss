@@ -1,0 +1,38 @@
+@import "../../styles/base.scss";
+.step_1 {
+  &-grid_cards {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    &-card {
+      width: 20vw;
+    }
+  }
+  &-description_container{
+    padding: 10px 0;
+    &-description{
+      padding: 3vh 0;
+      &-header{
+        padding-bottom: 5px;
+      }
+      &-body{
+        font-size: 15px;
+      }
+    }
+  }
+
+  @media screen and(max-width: $medium){
+    &-grid_cards {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        &-card {
+            width: 100%;
+            padding: 5vh 0;
+        }
+      }
+  }
+}

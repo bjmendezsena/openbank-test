@@ -1,5 +1,25 @@
 {
-    "header":{
-        "msg":"Hola mundo"
-    }
+  "wizard": {
+    "header": "Crea tu Passsword Manager",
+    "btn_cancel": "Cancelar",
+    "btn_continue": "Continuar"
+  },
+  "step_1": {
+    "card_1": "Guarda aquí todas tus contraseás, datos o cualquier información, olvida las notas de papel y las aplicaciones no protegidas",
+    "card_2": "Crea tu clave maestra: solo tú podrás acceder a tus secretos con ella.",
+    "subtitle_1": "Cómo funciona",
+    "subtitle_2": "Qué datos puedes guardar",
+    "desc_1": "En primer lugar, debes crear una contraseña diferente para sus pertenencias electrónicas. No podrás recuperar tu contraseña, así que recuérdala bien.",
+    "desc_2": "Por ejemplo, el número de tu tarjeta, el PIN y el PUK de tu teléfono móvil, el número de serie de alguno de tus dispositivos o cualquier información que necesites tener en un lugar seguro."
+  },
+  "step_2": {
+    "desc_1": "En primer lugar, debes crear una contraseña diferente para sus pertenencias electrónicas.",
+    "desc_2": "No podrás recuperar tu contraseña, así que recuérdala bien.",
+    "form": {
+      "input_1": "Crea tu Contraseña Maestra",
+      "input_2": "Repite tu Contraseña Maestra"
+    },
+    "text_2": "También puedes crear una pista que te ayude a recordar tu contraseña maestra.",
+    "input_secret": "Crea tu posta para recordar tu contraseña (opcional)"
+  }
 }

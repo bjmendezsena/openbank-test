@@ -1,28 +1,43 @@
 @import "../../../styles/base.scss";
 
 .OBInput {
-  padding: 0 15px;
-  align-items: center;
-  &-label {
-    font-weight: 400;
-    letter-spacing: 1px;
-    color: $secondary-color;
+  padding: 10px 0;
+  &-label_container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    &-info_icon {
+      color: $blue;
+    }
+    &-label {
+      margin-right: 10px;
+      font-weight: 900;
+      font-size: 20px;
+      letter-spacing: 1px;
+      color: $secondary-color;
+    }
   }
   &-container {
-    position: relative;
+    padding: 0;
+    margin: 0;
     margin-top: 7px;
     display: flex;
+    flex-direction: row;
     &-input {
+      flex: 1;
       width: 100%;
-      border: none;
       border: 1px solid $opacity;
       border-radius: 5px;
-      height: 45px;
+      height: 50px;
       transition: border 0.1s ease-in-out;
       padding: 0 20px;
       font-size: 1rem;
       letter-spacing: 2px;
       color: $secondary-color;
+      &-error{
+        border-color: $primary-color;
+
+      }
 
       &::placeholder {
         font-size: 1rem;
@@ -35,11 +50,58 @@
         outline: none;
       }
     }
-    &-icon {
+    &-icon_container {
+      display: flex;
       position: relative;
-      left: -8vh;
-      align-self: center;
-      cursor: pointer;
+      left: -45px;
+      &-icon {
+        align-self: center;
+        cursor: pointer;
+        background-color: $white;
+      }
+    }
+  }
+  &-footer {
+    display: flex;
+    position: relative;
+    width: 100%;
+    min-height: 65px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    &-text {
+      color: $opacity;
+      visibility: hidden;
+      
+      &-show {
+        visibility: visible;
+      }
+    }
+    &-error {
+      padding: 2px 0;
+      color: $primary-color;
+      opacity: 0.7;
+      visibility: hidden;
+      padding-right: 10px;
+      word-wrap: break-word;
+      font-weight: 900;
+      font-size: 12px;
+      font-style: italic;
+      &-show {
+        visibility: visible;
+      }
+    }
+  }
+
+  @media screen and(max-width: $medium) {
+    &-label_container {
+      &-info_icon {
+        display: flex;
+        position: relative;
+        align-self: center;
+        left: -10vw;
+        top: 2vh;
+      }
     }
   }
 }

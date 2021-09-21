@@ -1,8 +1,8 @@
+Si da algún error para arrancar seguramente sea necesario crear un .env con el siguiente campo:
+
+`SKIP_PREFLIGHT_CHECK=true`
+
 In the project directory, you can run:
-
-Si te da error al tratar de correr la aplicación crea un archivo .env y dentro pon el siguiente atributo:
-
-SKIP_PREFLIGHT_CHECK=true
 
 ### `npm start`
 

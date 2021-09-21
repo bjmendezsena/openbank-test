@@ -1,0 +1,58 @@
+@import "../../../styles/base.scss";
+
+.step_navigation {
+  display: flex;
+  width: min-content;
+  align-items: center;
+  transition: 1s ease-in-out;
+  &-step_bar {
+    content: "";
+    width: 100px;
+    background-color: $secondary-color;
+    opacity: 0.5;
+    height: 2px;
+    &-succeeded {
+      background-color: $primary-color;
+      opacity: 1;
+    }
+  }
+  &-circle_wrapper {
+    opacity: 0.5;
+    width: 29px;
+    height: 29px;
+    line-height: 25px;
+    background-color: $secondary-color;
+    color: $white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    
+    &-current {
+      position: relative;
+      width: 46px;
+      height: 46px;
+      opacity: 1;
+      &::before {
+        position: absolute;
+        content: "";
+        border: 25px solid $white;
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+        transform: rotate(-180deg);
+        bottom: -30px;
+        z-index: 1000;
+      }
+    }
+    &-succeeded {
+      background-color: aqua;
+      display: flex;
+      background-color: $primary-color;
+      opacity: 1;
+      
+    }
+  }
+}

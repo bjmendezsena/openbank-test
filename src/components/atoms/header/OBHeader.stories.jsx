@@ -1,9 +1,6 @@
 import React from "react";
 import { OBHeader } from "./OBHeader";
+import { storiesOf } from '@storybook/react';
 
-export default {
-  title: "Atoms/Text",
-  component: OBHeader,
-};
-
-export const Title = (args) => <OBHeader>Crea tu Password Manager</OBHeader>;
+storiesOf('Text', module)
+.add('Header',()=> <OBHeader>Crea tu Password Manager</OBHeader>)
