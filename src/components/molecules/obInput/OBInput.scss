@@ -8,6 +8,7 @@
     align-items: center;
     &-info_icon {
       color: $blue;
+      cursor: pointer;
     }
     &-label {
       margin-right: 10px;
@@ -45,7 +46,7 @@
         color: $opacity;
       }
       &:focus {
-        border-bottom: solid $orange;
+        border-bottom: 1px solid $orange;
         transition: border 0.1s ease-in-out;
         outline: none;
       }

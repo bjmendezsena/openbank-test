@@ -25,14 +25,7 @@ export const Wizart = ({
           <OBHeader text={getText("wizard.header")} />
         </div>
         {children}
-        <div className="wizart-content-footer">
-          <div className="wizart-content-footer-buttons">
-            <OPButton variant="light">{getText("wizard.btn_cancel")}</OPButton>
-            <OPButton variant="secondary" withIcon>
-              {getText("wizard.btn_continue")}
-            </OPButton>
-          </div>
-        </div>
+        
       </div>
     </div>
   );

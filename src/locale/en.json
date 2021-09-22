@@ -21,5 +21,14 @@
     },
     "text_2": "You can also create a hint to help you remember your master password.",
     "input_secret": "Create your post to remember your password (optional)"
+  },
+  "input_footers": {
+    "password1": "Min 8 - Max 24 characters, At least 1 number and a capital letter",
+    "pista": "(Maximum 60 characters)"
+  },
+  "form_errors": {
+    "password1": "Password does not meet requirements",
+    "password2": "Passwords do not match",
+    "pista": "Cannot exceed 60 characters"
   }
 }

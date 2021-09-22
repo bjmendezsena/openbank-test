@@ -9,7 +9,7 @@ import Step2 from "./views/Form";
 export const OpenBankApp = () => {
   return (
     <I18nextProvider i18n={i18Config}>
-      <Wizart currentStep={1} fullSucceeded={false} >
+      <Wizart currentStep={0} fullSucceeded={false} >
         <Step1 />
       </Wizart>
     </I18nextProvider>

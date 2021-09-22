@@ -9,8 +9,6 @@ import {
 import "./OBInput.scss";
 
 export const OBInput = ({
-  placeHolder = "",
-  onChange,
   type = "",
   styleInput = {},
   style = {},
@@ -18,6 +16,7 @@ export const OBInput = ({
   infoIcon = false,
   footer = "",
   error = "",
+  ...rest
 }) => {
   const withIcon = type === "password";
   const [visible, setVisible] = useState(false);
@@ -50,10 +49,9 @@ export const OBInput = ({
             ...styleInput,
           }}
           className={"OBInput-container-input "+inputErrorClass}
-          placeholder={placeHolder}
-          onChange={onChange}
           type={inputType}
           autoComplete="off"
+          {...rest}
         />
         <div
           className="OBInput-container-icon_container"

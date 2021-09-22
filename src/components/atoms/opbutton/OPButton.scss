@@ -36,4 +36,10 @@
       background-color: aliceblue;
     }
   }
+  &-disabled{
+    opacity: .7;
+    &:hover{
+      cursor: not-allowed;
+    }
+  }
 }

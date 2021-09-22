@@ -20,6 +20,15 @@
       "input_2": "Repite tu Contraseña Maestra"
     },
     "text_2": "También puedes crear una pista que te ayude a recordar tu contraseña maestra.",
-    "input_secret": "Crea tu posta para recordar tu contraseña (opcional)"
+    "input_secret": "Crea tu pista para recordar tu contraseña (opcional)"
+  },
+  "input_footers":{
+    "password1":"Min 8 - Max 24 caracteres, Al menos 1 número y una mayúscula",
+    "pista":"(Maximo 60 caracteres)"
+  },
+  "form_errors": {
+    "password1": "La contraseña no cumple los requisiros",
+    "password2":"Las contraseñas no coinciden",
+    "pista":"No puede superar los 60 carácteres"
   }
 }

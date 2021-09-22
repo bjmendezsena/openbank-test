@@ -9,15 +9,19 @@ export const OPButton = ({
   variant = "primary",
   style = {},
   withIcon = false,
+  disabled = false,
+  ...rest
 }) => {
   const variantStyle = `OBButton-${variant}`;
+  const disabledClass = disabled ? "OBButton-disabled" : "";
 
   return (
     <button
-      type="button"
       style={{ ...style }}
-      className={`OBButton ${variantStyle}`}
+      className={`OBButton ${variantStyle} ${disabledClass}`}
       onClick={onClick}
+      disabled={disabled}
+      {...rest}
     >
       {children}
       {withIcon && <BiChevronRight size={26} />}

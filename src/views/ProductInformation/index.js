@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 
-import step from "./step1.png";
 import { getText } from "../../utils/utils";
-import { OBHeader } from "../../components/atoms/header/OBHeader";
 import "./ProductInformation.scss";
-import { OBInput } from "../../components/molecules/obInput/OBInput";
+import { OPButton } from "../../components/atoms/opbutton/OPButton";
 import { CardEmojiInfo } from "../../components/molecules/cardEmojiInfo/CardEmojiInfo";
 import { EMOJI_NAME } from "../../constants/constants";
 class Step1 extends Component {
@@ -41,6 +39,14 @@ class Step1 extends Component {
             <p className="step_1-description_container-description-body">
               {getText("step_1.desc_2")}
             </p>
+          </div>
+        </div>
+        <div className="wizart-content-footer">
+          <div className="wizart-content-footer-buttons">
+            <OPButton variant="light">{getText("wizard.btn_cancel")}</OPButton>
+            <OPButton type="submit" variant="secondary" withIcon>
+              {getText("wizard.btn_continue")}
+            </OPButton>
           </div>
         </div>
       </div>
