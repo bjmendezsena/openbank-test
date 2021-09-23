@@ -9,7 +9,7 @@ export const useWizart = () => {
     resetState,
     onSubmitPassword,
     fullSucceeded,
-    loading
+    loading,
   } = useContext(PasswordManagerContext);
 
   const [form, setForm] = useState({
@@ -17,6 +17,14 @@ export const useWizart = () => {
     password2: "",
     pista: "",
   });
+
+  const resetForm = () => {
+    setForm({
+      password1: "",
+      password2: "",
+      pista: "",
+    });
+  };
 
   useEffect(() => {
     if (formData) {
@@ -31,10 +39,12 @@ export const useWizart = () => {
 
   const onCancel = () => {
     resetState();
+    resetForm();
   };
 
   const handleSubmit = (values = null) => {
     if (values) {
+      resetForm();
       onSubmitPassword(values);
     }
   };
@@ -50,6 +60,6 @@ export const useWizart = () => {
     fullSucceeded,
     form,
     currentStep,
-    loading
+    loading,
   };
 };

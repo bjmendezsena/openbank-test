@@ -12,7 +12,7 @@ const Step2 = ({ handleSubmit, handleReset, values, onCancel, loading }) => {
   const disabled = loading || values.password1.length === 0;
 
   const formik = useFormik({
-    initialValues: values || {
+    initialValues: {
       password1: "",
       password2: "",
       pista: "",
@@ -79,14 +79,23 @@ const Step2 = ({ handleSubmit, handleReset, values, onCancel, loading }) => {
         </div>
         <div className="wizart-content-footer">
           <div className="wizart-content-footer-buttons">
-            <OPButton onClick={onCancel} variant="light">
+            <OPButton
+              onClick={() => {
+                onCancel();
+                formik.resetForm();
+              }}
+              variant="light"
+            >
               {getText("wizard.btn_cancel")}
             </OPButton>
             <OPButton
               disabled={formik.errors.disabled}
               variant="secondary"
               withIcon
-              onClick={() => handleSubmit(formik.values)}
+              onClick={() => {
+                handleSubmit(formik.values);
+                formik.resetForm();
+              }}
             >
               {getText("wizard.btn_continue")}
             </OPButton>

@@ -3,9 +3,7 @@ import { EMOJI_NAME } from "../constants/constants";
 import { PasswordManagerContext } from "../context/PassworManagerContext";
 
 export const useFeedback = () => {
-  const { resetState, changeStep, fullSucceeded } = useContext(
-    PasswordManagerContext
-  );
+  const { resetState, fullSucceeded } = useContext(PasswordManagerContext);
 
   const result = fullSucceeded ? "SUCCESS" : "WARNING";
   const emogiName = EMOJI_NAME[result];
@@ -15,10 +13,7 @@ export const useFeedback = () => {
   const classError = !fullSucceeded ? "feedback-error" : "";
 
   const onClickButton = async () => {
-    if (!fullSucceeded) {
-      resetState();
-    }
-    changeStep(0);
+    resetState();
   };
 
   return {
