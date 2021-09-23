@@ -1,8 +1,9 @@
 Si da algún error para arrancar seguramente sea necesario crear un .env con el siguiente campo:
 
-`SKIP_PREFLIGHT_CHECK=true`
+## `SKIP_PREFLIGHT_CHECK=true`
 
-In the project directory, you can run:
+
+Despliegue: https://614bd3baacbbb400084db9f0--thirsty-davinci-e0c33d.netlify.app/
 
 ### `npm start`
 
