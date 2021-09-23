@@ -7,7 +7,6 @@ $desktop-font-size: 18px;
   display: flex;
   flex-direction: column;
 
-  
   &-main {
     padding: 3vw 0;
     &-description {
@@ -32,7 +31,7 @@ $desktop-font-size: 18px;
     }
   }
   @media screen and(max-width: $medium) {
-    padding: 0 ;
+    padding: 0;
     &-main {
       padding: 0;
       &-description {
@@ -41,8 +40,8 @@ $desktop-font-size: 18px;
       }
       &-form {
         flex-direction: column;
-        padding:0;
-     
+        padding: 0;
+
         margin-top: 50px;
         &-field {
           margin: 0;
@@ -55,6 +54,3 @@ $desktop-font-size: 18px;
     }
   }
 }
-
-
-
