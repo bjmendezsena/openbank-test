@@ -1,16 +1,16 @@
 import React from "react";
 import { Wizart } from "./Wizart";
-import StepNavigationStorie from "../stepNavigation/StepNavigation.stories";
+import { PassworManagerProvider } from "../../../context/PassworManagerContext";
 
 export default {
   title: "Wizard/WizardContainer",
   component: Wizart,
 };
 
-export const WizartContainer = (args) => <Wizart {...args} />;
+export const WizartContainer = (args) => (
+  <PassworManagerProvider>
+    <Wizart {...args} />
+  </PassworManagerProvider>
+);
 
-WizartContainer.args = {
-  ...StepNavigationStorie,
-  fullSucceeded: false,
-  currentStep: 0,
-};
+

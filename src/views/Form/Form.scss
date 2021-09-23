@@ -6,6 +6,8 @@ $desktop-font-size: 18px;
 .step_2 {
   display: flex;
   flex-direction: column;
+
+  
   &-main {
     padding: 3vw 0;
     &-description {
@@ -20,7 +22,7 @@ $desktop-font-size: 18px;
       &-field {
         align-items: center;
         margin-right: 10vw;
-        width: 30vw;
+        width: 25vw;
       }
     }
     &-secret {
@@ -53,3 +55,6 @@ $desktop-font-size: 18px;
     }
   }
 }
+
+
+

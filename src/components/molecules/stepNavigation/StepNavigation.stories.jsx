@@ -1,4 +1,5 @@
 import React from "react";
+import { PassworManagerProvider } from "../../../context/PassworManagerContext";
 import { StepNavigation } from "./StepNavigation";
 
 export default {
@@ -6,10 +7,13 @@ export default {
   component: StepNavigation,
 };
 
-export const Stepper = (args) => <StepNavigation {...args} />;
+export const Stepper = (args) => (
+  <PassworManagerProvider>
+    <StepNavigation {...args} />
+  </PassworManagerProvider>
+);
 
 Stepper.args = {
-  totalSteps:3,
-  currentStep: 0,
-  fullSucceeded:false
+  totalSteps: 3,
+  fullSucceeded: false,
 };

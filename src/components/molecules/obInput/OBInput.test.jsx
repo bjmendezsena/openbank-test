@@ -8,19 +8,19 @@ const getWrapper = (props = {}) => {
 
 describe("Test in OPinput component", () => {
   const onChange = jest.fn();
-  const placeHolder = "Input";
+  const placeholder = "Input";
 
   it("Should display the document", () => {
-    const wrapper = getWrapper({ onChange, placeHolder });
+    const wrapper = getWrapper({ onChange,  placeholder });
     const { getByPlaceholderText } = wrapper;
 
-    expect(getByPlaceholderText(placeHolder)).toBeInTheDocument();
+    expect(getByPlaceholderText(placeholder)).toBeInTheDocument();
   });
   it("Should change the value", () => {
-    const wrapper = getWrapper({ onChange, placeHolder });
+    const wrapper = getWrapper({ onChange,  placeholder });
     const newValue = "Hola mundo";
     const { getByPlaceholderText } = wrapper;
-    const input = getByPlaceholderText(placeHolder);
+    const input = getByPlaceholderText(placeholder);
     fireEvent.change(input, { target: { value: newValue } });
 
     expect(input.value).toBe(newValue);
@@ -29,7 +29,7 @@ describe("Test in OPinput component", () => {
   it("Should display the invisible icon", () => {
     const type = 'password';
     const testid = "test-icon-invisible";
-    const wrapper = getWrapper({ onChange, placeHolder, type });
+    const wrapper = getWrapper({ onChange,  placeholder, type });
 
     const { queryByTestId } = wrapper;
 
@@ -40,7 +40,7 @@ describe("Test in OPinput component", () => {
     const type = 'password';
     const testid = "test-icon-visible";
     const testidContainer = "test-icon-container-visible";
-    const wrapper = getWrapper({ onChange, placeHolder, type });
+    const wrapper = getWrapper({ onChange,  placeholder, type });
 
     const { queryByTestId } = wrapper;
     const container = queryByTestId(testidContainer);

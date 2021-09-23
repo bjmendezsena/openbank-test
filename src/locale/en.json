@@ -4,13 +4,15 @@
     "btn_cancel": "Cancel",
     "btn_continue": "Continue"
   },
+
   "step_1": {
     "card_1": "Save here all your passwords, data or any information, forget paper notes and unprotected applications",
     "card_2": "Create your master key: only you can access your secrets with it.",
     "subtitle_1": "How it works",
     "subtitle_2": "What data can you save",
     "desc_1": "First, you must create a different password for your electronic belongings. You will not be able to recover your password, so remember it well.",
-    "desc_2": "For example, the number of your card, the PIN and PUK of your mobile phone, the serial number of one of your devices or any information you need to have in a safe place."
+    "desc_2": "For example, the number of your card, the PIN and PUK of your mobile phone, the serial number of one of your devices or any information you need to have in a safe place.",
+    "input_check": "I accept that I am over 18 years of age and I consent to the processing of my personal data according to the data protection policy"
   },
   "step_2": {
     "desc_1": "First, you must create a different password for your electronic belongings.",
@@ -24,11 +26,22 @@
   },
   "input_footers": {
     "password1": "Min 8 - Max 24 characters, At least 1 number and a capital letter",
-    "pista": "(Maximum 60 characters)"
+    "pista": "(Maximum {ch} characters)"
   },
   "form_errors": {
     "password1": "Password does not meet requirements",
     "password2": "Passwords do not match",
     "pista": "Cannot exceed 60 characters"
+  },
+  "step_3": {
+    "success": {
+      "title": "Your Password Manager is already created!",
+      "text": "Your password has been created correctly. Now you can enjoy all the benefits."
+    },
+    "failed": {
+      "title": "There was an error",
+      "text": "We couldn't change your Master Password. Please try again later.",
+      "button": "Back to Password Manager"
+    }
   }
 }

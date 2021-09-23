@@ -1,10 +1,12 @@
-import { useMemo } from "react";
+import { useContext, useMemo } from "react";
+import { PasswordManagerContext } from "../context/PassworManagerContext";
 
 export const useSteps = (
   totalSteps = 0,
-  currentStep = 1,
   fullSucceeded = false
 ) => {
+  const { changeStep , currentStep , obtainedSteps} = useContext(PasswordManagerContext);
+
   const steps = useMemo(() => {
     const array = [];
 
@@ -21,6 +23,8 @@ export const useSteps = (
 
   const chekcIfIsSucceeded = (step = 0, i = 0) => {
     if (fullSucceeded) return true;
+    if(obtainedSteps.includes(step)) return true;
+    if(step)
     if (i < steps.indexOf(current)) return true;
     if (step === currentStep) return false;
   };
@@ -35,5 +39,6 @@ export const useSteps = (
     steps,
     chekcIfIsSucceeded,
     checkIfIsCurrent,
+    changeStep
   };
 };

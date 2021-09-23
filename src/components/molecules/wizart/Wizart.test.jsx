@@ -1,10 +1,14 @@
 import React from "react";
 import { shallow } from "enzyme";
-import { WizardContainer } from "./WizardContainer";
-
+import { Wizart } from "./Wizart";
+import { PassworManagerProvider } from "../../../context/PassworManagerContext";
 
 describe("Test inn WizardContainer component", () => {
   it("Should display the component", () => {
-    shallow(<WizardContainer />);
+    shallow(
+      <PassworManagerProvider>
+        <Wizart />
+      </PassworManagerProvider>
+    );
   });
 });

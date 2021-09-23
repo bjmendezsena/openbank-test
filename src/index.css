@@ -1,11 +1,17 @@
-* {
-  margin: 0;
-  padding: 0;
+
+
+*{
+  animation-duration: .5s;
 }
 body {
   font-family: "Quicksand", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#root{
+  padding: 0;
+  margin: 0;
 }
 
 code {

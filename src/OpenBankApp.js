@@ -2,16 +2,18 @@ import React from "react";
 import { I18nextProvider } from "react-i18next";
 import { Wizart } from "./components/molecules/wizart/Wizart";
 import i18Config from "./locale";
-import Step1 from "./views/ProductInformation";
-import Step3 from "./views/Feedback";
-import Step2 from "./views/Form";
+import { PassworManagerProvider } from "./context/PassworManagerContext";
+
+import "./OpenBankApp.scss";
 
 export const OpenBankApp = () => {
   return (
     <I18nextProvider i18n={i18Config}>
-      <Wizart currentStep={0} fullSucceeded={false} >
-        <Step1 />
-      </Wizart>
+      <PassworManagerProvider>
+        <div className="OpenBankApp" >
+          <Wizart />
+        </div>
+      </PassworManagerProvider>
     </I18nextProvider>
   );
 };

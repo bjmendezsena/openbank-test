@@ -1,12 +1,38 @@
-import React, {Component} from "react";
+import React from "react";
+import { Emoji } from "../../components/atoms/emoji/Emoji";
+import { OPButton } from "../../components/atoms/opbutton/OPButton";
+import { getText } from "../../utils/utils";
+import { useFeedback } from "../../hooks/useFeedback";
+import "./Feedback.scss";
 
-import success from './success.png';
-import error from './error.png'
+const Step3 = () => {
+  const {
+    emogiName,
+    title,
+    text,
+    buttonText,
+    classError,
+    onClickButton,
+  } = useFeedback();
 
-class Step3 extends Component {
-    render() {
-        return <img src={this.props.success ? success : error}/>
-    }
-}
+  return (
+    <div className={"feedback " + classError}>
+      <div className="feedback-content">
+        <div className="feedback-content-icon">
+          <Emoji name={emogiName} />
+        </div>
+        <div className="feedback-content-text">
+          <h1 className="feedback-content-text-title">{getText(title)}</h1>
+          <span>{getText(text)}</span>
+        </div>
+      </div>
+      <div className="feedback-footer">
+        <OPButton size="large" onClick={onClickButton} withIcon variant="light">
+          {getText(buttonText)}
+        </OPButton>
+      </div>
+    </div>
+  );
+};
 
 export default Step3;

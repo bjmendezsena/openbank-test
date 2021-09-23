@@ -1,0 +1,65 @@
+@import "../../../styles/base.scss";
+
+.loader_container{
+    display: flex;
+    position: absolute;
+    background-color: rgba(250, 250, 250, 0.644);
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    &-svg{
+
+        position: relative;
+        width: 150px;
+        animation: rotate 1s linear infinite;
+        &-circle{
+            width: 100%;
+            height: 100%;
+            fill: none;
+            stroke-width: 10;
+            stroke: $white;
+            
+            transform: translate((5px,5px));
+            stroke-linecap: round;
+            stroke-dasharray: 440;
+            stroke-dashoffset: 440;
+            animation: animate 2s linear infinite;
+        }
+    }
+
+    @keyframes animate {
+        0%,100%{
+            stroke-dashoffset: 440;
+            stroke: $secondary-color;
+        }
+        50%{
+            stroke-dashoffset: 0;
+            stroke: $primary-color;
+            
+        }
+        50.1%{
+            stroke-dashoffset: 880;
+        }
+        
+    }
+
+    @keyframes rotate{
+        0%,100%{
+            transform: rotate(0deg);
+            
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+        
+        
+        
+    }
+    @media screen and(max-width: $medium) {
+        &-svg{
+            position: fixed;
+            top: 40%;
+        }
+    }
+}

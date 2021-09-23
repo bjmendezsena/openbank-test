@@ -1,0 +1,27 @@
+@import "styles/base";
+
+.OpenBankApp {
+  padding: 20px 50px;
+  background-color: #eceef0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  h3{
+    color: $primary-color;
+  }
+  p{
+    color: $secondary-color;
+  }
+  &::before {
+    position: fixed;
+    left: 0;
+    top: 0;
+    content: "";
+    width: 100%;
+    height: 10vh;
+    background-color: #dbdfe1;
+  }
+  @media screen and(max-width: $medium) {
+    padding: 0;
+  }
+}

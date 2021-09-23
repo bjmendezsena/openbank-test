@@ -2,30 +2,53 @@ import React from "react";
 import { getText } from "../../../utils/utils";
 import { OBHeader } from "../../atoms/header/OBHeader";
 import { StepNavigation } from "../stepNavigation/StepNavigation";
-import { OPButton } from "../../atoms/opbutton/OPButton";
+import Step1 from "../../../views/ProductInformation";
+import Step2 from "../../../views/Form";
+import Step3 from "../../../views/Feedback";
+import { useWizart } from "../../../hooks/useWizart";
 
 import "./Wizart.scss";
+import { Loader } from "../../atoms/loader/Loader";
 
-export const Wizart = ({
-  children,
-  currentStep = 0,
-  fullSucceeded = false,
-}) => {
+export const Wizart = () => {
+  const {
+    onCancel,
+    stepClassName,
+    wizardHidden,
+    handleSubmit,
+    totalSteps,
+    fullSucceeded,
+    form,
+    currentStep,
+    loading,
+  } = useWizart();
+
   return (
-    <div className="wizart">
+    <div className={`wizart ${wizardHidden}`}>
       <div className="wizart-header">
         <StepNavigation
           currentStep={currentStep}
-          totalSteps={3}
+          totalSteps={totalSteps}
           fullSucceeded={fullSucceeded}
         />
       </div>
-      <div className="wizart-content">
+      <div className={"wizart-content " + stepClassName}>
         <div className="wizart-content-title">
-          <OBHeader text={getText("wizard.header")} />
+          {currentStep !== 2 && <OBHeader text={getText("wizard.header")} />}
         </div>
-        {children}
-        
+        {currentStep === 1 ? (
+          <Step2
+            loading={loading}
+            onCancel={onCancel}
+            values={form}
+            handleSubmit={handleSubmit}
+          />
+        ) : currentStep === 2 ? (
+          <Step3 />
+        ) : (
+          <Step1 />
+        )}
+        {loading ? <Loader /> : null}
       </div>
     </div>
   );
